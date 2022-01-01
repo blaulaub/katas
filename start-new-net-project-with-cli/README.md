@@ -1,9 +1,11 @@
-# Aim
+# Kata: Bootstrap a Dotnet Solution
+
+## Aim
 Stay familiar with the dotnet CLI subcommands that are required to bootstrap a new .NET solution.
 
 Takes about ~5 to ~10 minutes.
 
-# Prerequisites
+## Prerequisites
 
 Either have a .Net SDK installed, or use the Debian container provided by Microsoft (the latter has no editor pre-installed, `vim` is used here):
 
@@ -12,33 +14,39 @@ podman run -it mcr.microsoft.com/dotnet/sdk
 app update && apt install vim
 ```
 
-# Tasks
+## Tasks
 - create a new dotnet solution
-- create an executable project
-- create a test project
-- create a central build properties file
+- create and add an executable project
+- create and add a test project
+- create a central build properties file with some useful content
 
-# Questions
+## Questions
 - which directories and files will be produced?
 - what is the syntax to reference variables from the central build properties file in a project file?
 
-# Verify
+## Verify
 - build it
 - test it
 - execute it
 
-# Further reading
+## Further reading
 - The F# getting-started guide on dotnet CLI: <https://docs.microsoft.com/en-us/dotnet/fsharp/get-started/get-started-command-line>
 - About build customization: <https://docs.microsoft.com/en-us/visualstudio/msbuild/customize-your-build>
 
-# What you should have learned or remembered
+# Kata: Solution
+
+Spoiler warning: anything below belongs to the solution of the kata.
+
+---
+
+## What you should have learned or remembered
 - `dotnet new sln`
 - `dotnet new console`, `dotnet new nunit`
 - `dotnet sln add`
 - `Directory.Build.props`, `<Project>`, `<PropertyGroup>
 - `dotnet test`, `dotnet run --project`
 
-# Solution
+## Solution
 
 On the command line (for this kata, option `-lang "F#"` is optional):
 ```
@@ -68,10 +76,10 @@ dotnet test
 dotnet run --project MyProgram
 ```
 
-# Further exercises
+## Further exercises
 
 - include the console application project in the test; add some console code and test it
 - the CLI also already prepares coverage testing; test coverage and generate a report
 
 ---
-Note: convert this MarkDown into a PDF with `pandoc`.
+Note: convert this MarkDown into a PDF with `pandoc -o README.pdf README.md`.
